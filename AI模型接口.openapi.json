@@ -6626,6 +6626,129 @@
         "x-apifox-ignore-properties": [],
         "x-apifox-folder": "聊天"
       },
+      "SoraVideoTask": {
+        "type": "object",
+        "description": "Sora 视频任务基本信息",
+        "required": [
+          "id",
+          "object",
+          "model",
+          "status",
+          "created_at",
+          "updated_at"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "视频任务唯一 ID",
+            "examples": [
+              "qvideo-user123-1766453713089395279"
+            ]
+          },
+          "object": {
+            "type": "string",
+            "description": "对象类型，固定为 video",
+            "enum": [
+              "video"
+            ],
+            "examples": [
+              "video"
+            ]
+          },
+          "model": {
+            "type": "string",
+            "description": "使用的模型名称",
+            "examples": [
+              "sora-2"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "description": "任务状态",
+            "enum": [
+              "initializing",
+              "queued",
+              "in_progress",
+              "downloading",
+              "uploading",
+              "completed",
+              "failed",
+              "cancelled"
+            ],
+            "examples": [
+              "queued"
+            ]
+          },
+          "created_at": {
+            "type": "integer",
+            "description": "创建时间（Unix 时间戳，秒）",
+            "examples": [
+              1766453713
+            ]
+          },
+          "updated_at": {
+            "type": "integer",
+            "description": "更新时间（Unix 时间戳，秒）",
+            "examples": [
+              1766453713
+            ]
+          },
+          "seconds": {
+            "type": "string",
+            "description": "视频时长（秒）",
+            "examples": [
+              "4"
+            ]
+          },
+          "size": {
+            "type": "string",
+            "description": "视频分辨率（宽 x 高）",
+            "examples": [
+              "1280x720"
+            ]
+          }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "model",
+          "status",
+          "created_at",
+          "updated_at",
+          "seconds",
+          "size"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Sora"
+      },
+      "SoraVideoTaskRemix": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/SoraVideoTask"
+          },
+          {
+            "type": "object",
+            "required": [
+              "remixed_from_video_id"
+            ],
+            "properties": {
+              "remixed_from_video_id": {
+                "type": "string",
+                "description": "原视频任务 ID",
+                "examples": [
+                  "qvideo-user123-1766453713089395279"
+                ]
+              }
+            },
+            "x-apifox-orders": [
+              "remixed_from_video_id"
+            ],
+            "x-apifox-ignore-properties": []
+          }
+        ],
+        "description": "Sora 视频 Remix 任务",
+        "x-apifox-folder": "视频/Sora"
+      },
       "KlingV21CreateRequest": {
         "type": "object",
         "required": [
@@ -6889,7 +7012,7 @@
           "error"
         ],
         "x-apifox-ignore-properties": [],
-        "x-apifox-folder": "视频/kling-video-o1"
+        "x-apifox-folder": "视频"
       },
       "KlingV25TurboCreateRequest": {
         "type": "object",
@@ -7153,7 +7276,7 @@
           "error"
         ],
         "x-apifox-ignore-properties": [],
-        "x-apifox-folder": "视频/kling-video-o1"
+        "x-apifox-folder": "视频"
       },
       "KlingVideoO1CreateRequest": {
         "type": "object",
@@ -7473,7 +7596,7 @@
           "error"
         ],
         "x-apifox-ignore-properties": [],
-        "x-apifox-folder": "视频/kling-video-o1"
+        "x-apifox-folder": "视频"
       },
       "KlingV3OmniCreateRequest": {
         "type": "object",
@@ -9391,6 +9514,137 @@
         "x-apifox-ignore-properties": [],
         "x-apifox-folder": "视频"
       },
+      "VideoStatusResponse": {
+        "type": "object",
+        "description": "视频任务状态响应",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "视频任务唯一 ID"
+          },
+          "object": {
+            "type": "string",
+            "enum": [
+              "video"
+            ],
+            "description": "对象类型，固定为 video"
+          },
+          "model": {
+            "type": "string",
+            "description": "使用的模型名称"
+          },
+          "mode": {
+            "type": "string",
+            "description": "生成模式，std 或 pro，仅在成功时返回"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "initializing",
+              "queued",
+              "in_progress",
+              "downloading",
+              "uploading",
+              "completed",
+              "failed",
+              "cancelled"
+            ],
+            "description": "任务状态：initializing(初始化中)、queued(排队中)、in_progress(处理中)、downloading(下载中)、uploading(上传中)、completed(已完成)、failed(失败)、cancelled(已取消)"
+          },
+          "created_at": {
+            "type": "integer",
+            "description": "创建时间（Unix 时间戳，秒）"
+          },
+          "updated_at": {
+            "type": "integer",
+            "description": "更新时间（Unix 时间戳，秒）"
+          },
+          "completed_at": {
+            "type": "integer",
+            "description": "完成时间（Unix 时间戳，秒），仅在已完成或失败时返回"
+          },
+          "seconds": {
+            "type": "string",
+            "description": "视频时长（秒）"
+          },
+          "size": {
+            "type": "string",
+            "description": "视频分辨率（宽 x 高）"
+          },
+          "task_result": {
+            "type": "object",
+            "description": "任务结果，包含生成的视频列表，仅在已完成时返回",
+            "properties": {
+              "videos": {
+                "type": "array",
+                "description": "生成的视频列表",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "视频 ID，全局唯一"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "视频下载 URL（注意：生成的视频会在 7 天后过期，请及时转存）"
+                    },
+                    "duration": {
+                      "type": "string",
+                      "description": "视频时长（秒）"
+                    }
+                  },
+                  "x-apifox-orders": [
+                    "id",
+                    "url",
+                    "duration"
+                  ],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            },
+            "x-apifox-orders": [
+              "videos"
+            ],
+            "x-apifox-ignore-properties": []
+          },
+          "error": {
+            "type": "object",
+            "description": "错误信息，仅在失败时返回",
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "错误码"
+              },
+              "message": {
+                "type": "string",
+                "description": "错误描述"
+              }
+            },
+            "x-apifox-orders": [
+              "code",
+              "message"
+            ],
+            "x-apifox-ignore-properties": []
+          }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "model",
+          "mode",
+          "status",
+          "created_at",
+          "updated_at",
+          "completed_at",
+          "seconds",
+          "size",
+          "task_result",
+          "error"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频"
+      },
       "Veo31FastImageToVideoInput": {
         "x-fal-order-properties": [
           "prompt",
@@ -9692,6 +9946,114 @@
           "image",
           "n",
           "negative_prompt",
+          "aspect_ratio"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/kling-v1"
+      },
+      "KlingV1EditImageRequest": {
+        "type": "object",
+        "required": [
+          "model",
+          "image",
+          "prompt"
+        ],
+        "properties": {
+          "model": {
+            "type": "string",
+            "enum": [
+              "kling-v1"
+            ],
+            "description": "图像生成模型名称"
+          },
+          "image": {
+            "type": "string",
+            "description": "输入图像 URL。注意:多图生图场景下此参数必填,但可以传空字符串,实际图像通过 subject_image_list 等参数指定。如果直接提供图像 URL,必须是公开可访问的链接",
+            "examples": [
+              ""
+            ]
+          },
+          "prompt": {
+            "type": "string",
+            "maxLength": 2500,
+            "description": "图像编辑的文本描述提示词。清晰描述期望的编辑效果,包含风格、色彩、构图等具体细节。字符数限制:不超过 2500 个字符",
+            "examples": [
+              "综合两个图像生成一个新场景"
+            ]
+          },
+          "n": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10,
+            "default": 1,
+            "description": "生成图像数量,取值范围:1-10"
+          },
+          "subject_image_list": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 4,
+            "description": "多图生图的参考图片列表。最多支持 4 张图片,最少支持 2 张图片。图片格式支持:.jpg/.jpeg/.png。图片文件大小不能超过 10MB。图片宽高尺寸不小于 300px。图片宽高比要在 1:2.5 ~ 2.5:1 之间",
+            "items": {
+              "type": "object",
+              "required": [
+                "subject_image"
+              ],
+              "properties": {
+                "subject_image": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "参考图片 URL",
+                  "examples": [
+                    "https://example.com/subject.jpg"
+                  ]
+                }
+              },
+              "x-apifox-orders": [
+                "subject_image"
+              ],
+              "x-apifox-ignore-properties": []
+            }
+          },
+          "scene_image": {
+            "type": "string",
+            "format": "uri",
+            "description": "场景参考图 URL。内容为可公开访问的 URL 链接。图片格式支持:.jpg/.jpeg/.png。图片文件大小不能超过 10MB。图片宽高尺寸不小于 300px。图片宽高比要在 1:2.5 ~ 2.5:1 之间",
+            "examples": [
+              "https://example.com/scene.jpg"
+            ]
+          },
+          "style_image": {
+            "type": "string",
+            "format": "uri",
+            "description": "风格参考图 URL。内容为可公开访问的 URL 链接。图片格式支持:.jpg/.jpeg/.png。图片文件大小不能超过 10MB。图片宽高尺寸不小于 300px。图片宽高比要在 1:2.5 ~ 2.5:1 之间",
+            "examples": [
+              "https://example.com/style.jpg"
+            ]
+          },
+          "aspect_ratio": {
+            "type": "string",
+            "enum": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4",
+              "3:2",
+              "2:3",
+              "21:9"
+            ],
+            "default": "16:9",
+            "description": "生成图片的画面纵横比(宽:高)"
+          }
+        },
+        "x-apifox-orders": [
+          "model",
+          "image",
+          "prompt",
+          "n",
+          "subject_image_list",
+          "scene_image",
+          "style_image",
           "aspect_ratio"
         ],
         "x-apifox-ignore-properties": [],
@@ -11260,6 +11622,23 @@
         "x-apifox-ignore-properties": [],
         "x-apifox-folder": "图像生成"
       },
+      "CreateOmniImageResponse": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "description": "任务 ID，用于后续查询任务状态和结果",
+            "examples": [
+              "chatimage-1704067200000000000-user123"
+            ]
+          }
+        },
+        "x-apifox-orders": [
+          "task_id"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成"
+      },
       "Gemini31FlashImageGenerationRequest": {
         "type": "object",
         "required": [
@@ -11308,6 +11687,91 @@
           "temperature",
           "top_p",
           "top_k"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成"
+      },
+      "ImageTaskInfoResponse": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "description": "任务 ID",
+            "examples": [
+              "chatimage-1704067200000000000-user123"
+            ]
+          },
+          "created": {
+            "type": "integer",
+            "format": "int64",
+            "description": "任务创建时间（Unix 时间戳）",
+            "examples": [
+              1704067200
+            ]
+          },
+          "status": {
+            "type": "string",
+            "description": "任务状态",
+            "enum": [
+              "submitted",
+              "processing",
+              "succeed",
+              "failed"
+            ],
+            "examples": [
+              "succeed"
+            ]
+          },
+          "status_message": {
+            "type": "string",
+            "description": "状态附加信息，通常在失败时包含错误原因",
+            "examples": [
+              "content moderation failed"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "description": "生成的图片列表，任务成功时返回",
+            "items": {
+              "type": "object",
+              "properties": {
+                "index": {
+                  "type": "integer",
+                  "description": "图片序号（从 0 开始）",
+                  "examples": [
+                    0
+                  ]
+                },
+                "url": {
+                  "type": "string",
+                  "description": "图片 URL",
+                  "examples": [
+                    "https://cdn.example.com/generated-image.png"
+                  ]
+                }
+              },
+              "x-apifox-orders": [
+                "index",
+                "url"
+              ],
+              "x-apifox-ignore-properties": []
+            }
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "生成的图片数量",
+            "examples": [
+              2
+            ]
+          }
+        },
+        "x-apifox-orders": [
+          "task_id",
+          "created",
+          "status",
+          "status_message",
+          "data",
+          "quantity"
         ],
         "x-apifox-ignore-properties": [],
         "x-apifox-folder": "图像生成"
@@ -12235,7 +12699,18 @@
       }
     },
     "responses": {},
-    "securitySchemes": {}
+    "securitySchemes": {
+      "qnaigc": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "使用 Bearer Token 进行认证，请在请求头中添加：Authorization: Bearer <access_token>"
+      },
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "使用 API Key 进行认证，格式: Bearer YOUR_API_KEY"
+      }
+    }
   },
   "servers": [],
   "security": []
