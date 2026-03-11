@@ -11,25 +11,100 @@
   },
   "tags": [
     {
-      "name": "视频/Sora"
+      "name": "模型"
     },
     {
-      "name": "默认模块/视频/kling-v2-1"
+      "name": "聊天"
     },
     {
-      "name": "默认模块/视频/kling-v2-5-turbo"
+      "name": "聊天/gemini-3.0-pro-preview"
     },
     {
-      "name": "可灵 v2.6"
+      "name": "聊天/gemini-2.5-pro"
     },
     {
-      "name": "默认模块/视频/kling-video-o1"
+      "name": "聊天/openai/gpt-5"
     },
     {
-      "name": "视频/Vidu"
+      "name": "聊天/openai/gpt-5.2"
     },
     {
-      "name": "视频生成"
+      "name": "聊天/openai/gpt-5.2-codex"
+    },
+    {
+      "name": "聊天/gemini-2.5-flash"
+    },
+    {
+      "name": "聊天/claude-4.5-sonnet"
+    },
+    {
+      "name": "聊天/claude-4.6-opus"
+    },
+    {
+      "name": "聊天/deepseek/deepseek-v3.2-251201"
+    },
+    {
+      "name": "聊天/deepseek-v3"
+    },
+    {
+      "name": "聊天/claude-3.7-sonnet"
+    },
+    {
+      "name": "聊天/doubao-seed-1.6"
+    },
+    {
+      "name": "聊天/qwen3-max-2026-01-23"
+    },
+    {
+      "name": "聊天/moonshotai/kimi-k2.5"
+    },
+    {
+      "name": "视频"
+    },
+    {
+      "name": "视频/sora-2"
+    },
+    {
+      "name": "视频/sora-2-pro"
+    },
+    {
+      "name": "视频/kling-v2-1"
+    },
+    {
+      "name": "视频/kling-v2-5-turbo"
+    },
+    {
+      "name": "视频/kling-v2-6"
+    },
+    {
+      "name": "视频/kling-v3"
+    },
+    {
+      "name": "视频/kling-video-o1"
+    },
+    {
+      "name": "视频/kling-v3-omni"
+    },
+    {
+      "name": "视频/viduq1"
+    },
+    {
+      "name": "视频/viduq2"
+    },
+    {
+      "name": "视频/viduq2-pro"
+    },
+    {
+      "name": "视频/viduq2-turbo"
+    },
+    {
+      "name": "视频/Veo"
+    },
+    {
+      "name": "视频/veo-3.1-fast-generate-001"
+    },
+    {
+      "name": "图像生成"
     },
     {
       "name": "图像生成/kling-v1"
@@ -56,7 +131,31 @@
       "name": "图像生成/gemini-3.1-flash-image-preview"
     },
     {
-      "name": "图像生成"
+      "name": "图像生成/kling-image-o1"
+    },
+    {
+      "name": "文件"
+    },
+    {
+      "name": "视频/Sora"
+    },
+    {
+      "name": "默认模块/视频/kling-v2-1"
+    },
+    {
+      "name": "默认模块/视频/kling-v2-5-turbo"
+    },
+    {
+      "name": "可灵 v2.6"
+    },
+    {
+      "name": "默认模块/视频/kling-video-o1"
+    },
+    {
+      "name": "视频/Vidu"
+    },
+    {
+      "name": "视频生成"
     },
     {
       "name": "Files"
@@ -68,7 +167,9 @@
         "summary": "模型列表",
         "deprecated": false,
         "description": "",
-        "tags": [],
+        "tags": [
+          "模型"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -744,7 +845,9 @@
         "summary": "Anthropic协议",
         "deprecated": false,
         "description": "",
-        "tags": [],
+        "tags": [
+          "聊天"
+        ],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -849,7 +952,9 @@
         "summary": "Response API",
         "deprecated": false,
         "description": "此接口为白名单内测接口，不对所有人开放",
-        "tags": [],
+        "tags": [
+          "聊天"
+        ],
         "parameters": [
           {
             "name": "api-version",
@@ -1073,7 +1178,9 @@
         "deprecated": false,
         "description": "",
         "operationId": "createVideoKlingO1",
-        "tags": [],
+        "tags": [
+          "视频/kling-v3-omni"
+        ],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -1203,7 +1310,9 @@
         "deprecated": false,
         "description": "根据视频任务 ID 查询 kling-v3-omni 模型的视频生成状态和结果。建议定期轮询直到状态变为 completed 或 failed。",
         "operationId": "getVideoStatusKlingO1",
-        "tags": [],
+        "tags": [
+          "视频/kling-v3-omni"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1318,6 +1427,7 @@
         "description": "基于已完成的视频任务，使用新的提示词重新生成视频。保持原视频的时长和分辨率。",
         "operationId": "remixVideo",
         "tags": [
+          "视频/sora-2-pro",
           "视频/Sora"
         ],
         "parameters": [
@@ -1416,6 +1526,7 @@
         "deprecated": false,
         "description": "创建文生视频任务，返回任务ID和查询任务状态及结果的URL",
         "tags": [
+          "视频/viduq1",
           "视频/Vidu"
         ],
         "parameters": [
@@ -1538,6 +1649,7 @@
         "deprecated": false,
         "description": "创建参考生视频任务参考生视频分为音视频直出、视频直出功能，二者使用相同的接口地址与请求方式，请求体不同，参考下方示例。\n参考生视频-音视频直出：您可以指定视频中的主体用台词对话，直接生成完整的音视频；\n参考生视频-视频直出：为视频的场景配置对应背景音乐，不含台词；\n返回任务ID和查询任务状态及结果的URL",
         "tags": [
+          "视频/viduq1",
           "视频/Vidu"
         ],
         "parameters": [
@@ -1721,7 +1833,9 @@
         "summary": "查询任务状态",
         "deprecated": false,
         "description": "根据request_id查询视频任务的状态",
-        "tags": [],
+        "tags": [
+          "视频/viduq2-turbo"
+        ],
         "parameters": [
           {
             "name": "request_id",
@@ -1882,7 +1996,9 @@
         "summary": "查询任务结果",
         "deprecated": false,
         "description": "根据request_id查询视频任务的结果",
-        "tags": [],
+        "tags": [
+          "视频/viduq2-turbo"
+        ],
         "parameters": [
           {
             "name": "request_id",
@@ -1942,6 +2058,7 @@
         "deprecated": false,
         "description": "创建文生视频任务，返回任务ID和查询任务状态及结果的URL",
         "tags": [
+          "视频/viduq2",
           "视频/Vidu"
         ],
         "parameters": [
@@ -2064,6 +2181,7 @@
         "deprecated": false,
         "description": "创建参考生视频任务参考生视频分为音视频直出、视频直出功能，二者使用相同的接口地址与请求方式，请求体不同，参考下方示例。\n参考生视频-音视频直出：您可以指定视频中的主体用台词对话，直接生成完整的音视频；\n参考生视频-视频直出：为视频的场景配置对应背景音乐，不含台词；\n返回任务ID和查询任务状态及结果的URL",
         "tags": [
+          "视频/viduq2",
           "视频/Vidu"
         ],
         "parameters": [
@@ -2248,6 +2366,7 @@
         "deprecated": false,
         "description": "创建图生视频任务，返回任务ID和查询任务状态及结果的URL",
         "tags": [
+          "视频/viduq2-pro",
           "视频/Vidu"
         ],
         "parameters": [
@@ -2380,6 +2499,7 @@
         "deprecated": false,
         "description": "创建首尾帧生视频任务，返回任务ID和查询任务状态及结果的URL",
         "tags": [
+          "视频/viduq2-pro",
           "视频/Vidu"
         ],
         "parameters": [
@@ -2510,6 +2630,7 @@
         "deprecated": false,
         "description": "创建图生视频任务，返回任务ID和查询任务状态及结果的URL",
         "tags": [
+          "视频/viduq2-turbo",
           "视频/Vidu"
         ],
         "parameters": [
@@ -2645,6 +2766,7 @@
         "deprecated": false,
         "description": "创建首尾帧生视频任务，返回任务ID和查询任务状态及结果的URL",
         "tags": [
+          "视频/viduq2-turbo",
           "视频/Vidu"
         ],
         "parameters": [
@@ -2776,6 +2898,7 @@
         "description": "提交一个异步视频生成任务。任务创建成功后返回任务 ID，可通过 GET `/videos/generations/{id}` 查询任务状态和结果。\n\n支持以下生成模式：\n- **文生视频**：仅提供 prompt\n- **图生视频**：提供 prompt + image\n- **参考图片生成**：提供 prompt + referenceImages（仅 veo-2.0-generate-exp 和 veo-3.1-generate-preview 支持）\n\n**回调通知**：可选设置 `callback_url`，任务到达终态（Completed / Failed）时，系统会向该 URL 发送 HTTP POST 请求，payload 结构与 GET 查询接口响应一致。最多重试 3 次（指数退避 2s → 4s），4xx 客户端错误不重试。\n\n\ncallback的消息体和查询接口一致，参考：\n```json\n{\n  \"id\": \"chatvideo-1772778462403778814-root\",\n  \"model\": \"veo-3.0-generate-preview\",\n  \"status\": \"Completed\",\n  \"message\": \"完成\",\n  \"data\": {\n    \"videos\": [\n      {\n        \"url\": \"https://aitoken-video.qnaigc.com/root/out-chatvideo-1772778462403778814-root/sample_0.mp4?e=1773988232&token=IDB69r4gicDbMd9Fbmn9w2bWuEENg9i5_yasXqhp:P5Y96rq6S2wkU8PCp7gqqGLVhbM=\",\n        \"mimeType\": \"video/mp4\"\n      }\n    ]\n  },\n  \"created_at\": \"2026-03-06T14:27:42+08:00\",\n  \"updated_at\": \"2026-03-06T14:30:32.811531241+08:00\"\n}\n```",
         "operationId": "createVideoGeneration",
         "tags": [
+          "视频/Veo",
           "视频生成"
         ],
         "parameters": [],
@@ -2989,6 +3112,7 @@
         "description": "通过任务 ID 查询视频生成任务的状态和结果。任务完成后，响应中的 `data.videos` 字段包含生成的视频下载链接（有效期 14 天）。",
         "operationId": "getVideoGeneration",
         "tags": [
+          "视频/Veo",
           "视频生成"
         ],
         "parameters": [
@@ -3122,7 +3246,9 @@
         "summary": "创建图生视频任务",
         "deprecated": false,
         "description": "",
-        "tags": [],
+        "tags": [
+          "视频/veo-3.1-fast-generate-001"
+        ],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -3156,7 +3282,9 @@
         "summary": "查询状态",
         "deprecated": false,
         "description": "",
-        "tags": [],
+        "tags": [
+          "视频/veo-3.1-fast-generate-001"
+        ],
         "parameters": [
           {
             "name": "request_id",
@@ -3201,7 +3329,9 @@
         "summary": "获取结果",
         "deprecated": false,
         "description": "",
-        "tags": [],
+        "tags": [
+          "视频/veo-3.1-fast-generate-001"
+        ],
         "parameters": [
           {
             "name": "request_id",
@@ -3902,6 +4032,7 @@
         "description": "创建可灵 OmniImage 图像生成任务。支持文本提示词、参考图片的多模态输入方式。任务为异步执行，创建成功后返回任务 ID，需通过查询接口获取生成结果。",
         "operationId": "createOmniImageTask",
         "tags": [
+          "图像生成/kling-image-o1",
           "图像生成"
         ],
         "parameters": [],
@@ -4042,6 +4173,7 @@
         "description": "根据任务 ID 查询图像生成任务的状态和结果。任务完成后，返回生成的图像 URL 列表。",
         "operationId": "getImageTaskInfo",
         "tags": [
+          "图像生成/kling-image-o1",
           "图像生成"
         ],
         "parameters": [
@@ -4268,6 +4400,7 @@
         "description": "根据任务 ID 查询图像生成任务的状态和结果。任务完成后，返回生成的图像 URL 列表。",
         "operationId": "getImageTaskInfo",
         "tags": [
+          "图像生成/kling-image-o1",
           "图像生成"
         ],
         "parameters": [
@@ -4397,6 +4530,7 @@
         "description": "### 文件上传\n\n这是一个异步文件上传导入任务。本接口专为 **Gemini 模型大文件理解场景** 优化。\n\n#### 💡 为什么使用此接口？\nVertex AI 在通过 HTTP 直接传入文件进行理解时，存在 **15MB** 的硬性限制。对于大于 15MB 的文件（如长视频、高分辨率图像），官方要求必须使用 Google Cloud Storage (GCS) 链接。\n**本接口旨在简化该流程**：您只需提供文件的公开 URL，系统将自动把文件转存至 GCS 并对接 Vertex AI，您无需自行配置或管理 GCS 存储桶。\n\n#### 接口约束\n* **支持场景**：仅适用于 Gemini 模型的大文件（>15MB）多模态理解。\n* **文件大小**：最大支持 **2GB**。\n* **网络要求**：`source_url` 必须是公网可访问的 HTTP/HTTPS 地址。\n\n#### 调用流程\n1.  **提交任务**：调用本接口提交 `source_url`。\n2.  **获取 ID**：接口立即返回 `file_id`，任务进入后台**异步处理**队列。\n3.  **检查状态**：客户端需轮询 `GET /files/{file_id}` 接口，直到文件状态变更为 `ready` 。",
         "operationId": "createFile",
         "tags": [
+          "文件",
           "Files"
         ],
         "parameters": [],
@@ -4516,6 +4650,7 @@
         "description": "获取当前用户的文件列表。支持按状态过滤和游标分页。\n\n分页使用游标方式，通过 `after` 参数传入上一页最后一条记录的 ID 来获取下一页数据。",
         "operationId": "listFiles",
         "tags": [
+          "文件",
           "Files"
         ],
         "parameters": [
@@ -4626,6 +4761,7 @@
         "description": "根据文件 ID 查询文件的详细信息和当前状态。\n\n**状态说明**：\n- `pending`：等待处理\n- `uploading`：正在上传到目标存储\n- `ready`：上传完成，可用于推理\n- `failed`：上传失败，查看 error 字段获取详细信息\n- `expired`：文件已过期，需要重新创建\n\n---\n\n\n### 🚀 调用示例：从导入到推理\n\n以下展示了当文件处理完成并获得 `file_id` 后，如何在模型推理接口中使用该文件。\n\n#### 场景：视频理解\n假设您已通过本接口上传了一个长视频，并获得了文件 ID：`qfile-123-1770719212268100147-e0011b`。\n\n**请求说明**：\n在推理接口（Chat/Completions）的 `messages` 数组中，将 `type` 指定为 `file` 或 `image_url` ，并填入对应的 `file_id` 或 `url`。\n\n**请求报文 (JSON)**：\n\n```json\n{\n    \"stream\": false,\n    \"model\": \"gemini-3.0-pro-preview\",\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": [\n                {\n                    \"type\": \"text\",\n                    \"text\": \"这段视频里发生了什么？请详细描述。\"\n                },\n                {\n                    \"type\": \"file\",\n                    \"file\": {\n                        \"file_id\": \"qfile-123-1770719212268100147-e0011b\",\n                        \"format\": \"video/mp4\"\n                    }\n                }\n            ]\n        }\n    ]\n}\n```",
         "operationId": "getFile",
         "tags": [
+          "文件",
           "Files"
         ],
         "parameters": [
@@ -4751,6 +4887,7 @@
         "description": "删除指定的文件记录及其在目标存储中的资源。\n\n删除操作会：\n1. 删除数据库中的文件记录\n2. 尝试删除目标云存储中的文件副本（如果存在）\n\n**注意**：删除操作不可逆，请谨慎操作。",
         "operationId": "deleteFile",
         "tags": [
+          "文件",
           "Files"
         ],
         "parameters": [
