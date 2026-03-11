@@ -205,14 +205,26 @@
                           "object",
                           "created",
                           "owned_by"
-                        ]
+                        ],
+                        "x-apifox-orders": [
+                          "id",
+                          "object",
+                          "created",
+                          "owned_by"
+                        ],
+                        "x-apifox-ignore-properties": []
                       }
                     }
                   },
                   "required": [
                     "object",
                     "data"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "object",
+                    "data"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "object": "list",
@@ -485,10 +497,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "模型",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425177994-run"
       }
     },
     "/v1/chat/completions": {
@@ -645,7 +662,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 0
           },
           "400": {
             "description": "错误响应",
@@ -670,9 +688,19 @@
                           "type": "string",
                           "description": "错误代码"
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "message",
+                        "type",
+                        "code"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "error"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "examples": {
                   "2": {
@@ -708,7 +736,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 1
           },
           "401": {
             "description": "错误响应",
@@ -733,9 +762,19 @@
                           "type": "string",
                           "description": "错误代码"
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "message",
+                        "type",
+                        "code"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "error"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "examples": {
                   "5": {
@@ -771,7 +810,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 2
           },
           "500": {
             "description": "错误响应",
@@ -796,9 +836,19 @@
                           "type": "string",
                           "description": "错误代码"
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "message",
+                        "type",
+                        "code"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "error"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "examples": {
                   "8": {
@@ -834,10 +884,14 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 3
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "图像生成/gemini-3.1-flash-image-preview",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178073-run"
       }
     },
     "/v1/messages": {
@@ -877,10 +931,20 @@
                               "text": {
                                 "type": "string"
                               }
-                            }
+                            },
+                            "x-apifox-orders": [
+                              "type",
+                              "text"
+                            ],
+                            "x-apifox-ignore-properties": []
                           }
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "role",
+                        "content"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
                   },
                   "max_tokens": {
@@ -891,7 +955,13 @@
                   "model",
                   "messages",
                   "max_tokens"
-                ]
+                ],
+                "x-apifox-orders": [
+                  "model",
+                  "messages",
+                  "max_tokens"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "example": {
                 "model": "claude-4.5-sonnet",
@@ -919,7 +989,9 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "id": "msg_f69c4d5d67c64d3bae8865537ee82ee8",
@@ -941,10 +1013,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "聊天",
+        "x-apifox-status": "developing",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425177997-run"
       }
     },
     "/v1/llm/v1/responses": {
@@ -1009,7 +1086,12 @@
                     "required": [
                       "effort",
                       "summary"
-                    ]
+                    ],
+                    "x-apifox-orders": [
+                      "effort",
+                      "summary"
+                    ],
+                    "x-apifox-ignore-properties": []
                   },
                   "include": {
                     "type": "array",
@@ -1030,7 +1112,15 @@
                   "include",
                   "stream",
                   "model"
-                ]
+                ],
+                "x-apifox-orders": [
+                  "input",
+                  "reasoning",
+                  "include",
+                  "stream",
+                  "model"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "example": {
                 "input": "How many r`s are in the word `strawberry?`",
@@ -1055,7 +1145,9 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "id": "resp_HRgZB1Zd2T5ga4s9hWoBSPF60vyXm3EA16FMq3n_nANTyUxNjmva2AItT_EZsmzC5Ky4V4UmlFVvCYF30-Jt4pGvzr9_mLzYAcDwd_BGad90SwuGkJKU2wjJo5odR6X8HJJYzHTlzkZzQbb95nvataeuS_zJRMAf6T67oVHiMHzBhIcc0SU2i-ieU82zkHp9HdN4at5uMPRGxMdTldpnUeCFgEQiTW_2p7GOxbg_6taiyARNgt_-TzRLzLaHoSb-gcnq6j2Ttlo1Pl4ut4nwWPMD8poeh5jMDR0NfMeI_yzdN2MVMDyesvqa7CVrNYLMqmPGcXAw7VK93zsRGripC1ECqwxog3g8t61icJEuBr-o4YtRTF4R4o750SJxQe-wMc1KNOH3ZWFATp9ylt1AMVmp2RxgOrOpe-uIHsbzXHGTpCSMr09KLt-OfCPievFvkb_66ov5YCjlFvh8u-3U76xa",
@@ -1166,10 +1258,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "聊天",
+        "x-apifox-status": "developing",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425177998-run"
       }
     },
     "/v1/videos": {
@@ -1274,7 +1371,9 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           },
           "400": {
             "description": "请求参数错误",
@@ -1282,11 +1381,15 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {},
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": []
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "请求有误",
+            "x-apifox-ordering": 1
           },
           "401": {
             "description": "未授权 - API Key 无效或缺失",
@@ -1294,14 +1397,21 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {},
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": []
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "未认证",
+            "x-apifox-ordering": 2
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/kling-v3-omni",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178030-run"
       }
     },
     "/v1/videos/{id}": {
@@ -1390,7 +1500,9 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           },
           "401": {
             "description": "未授权 - API Key 无效或缺失",
@@ -1398,11 +1510,15 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {},
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": []
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "未认证",
+            "x-apifox-ordering": 1
           },
           "404": {
             "description": "视频任务不存在",
@@ -1410,14 +1526,21 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {},
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": []
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "未找到",
+            "x-apifox-ordering": 2
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/kling-v3-omni",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178031-run"
       }
     },
     "/v1/videos/{id}/remix": {
@@ -1459,7 +1582,11 @@
                       "将场景改为夜晚,增加霓虹灯效果,赛博朋克风格"
                     ]
                   }
-                }
+                },
+                "x-apifox-orders": [
+                  "prompt"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "example": {
                 "prompt": "将场景改为夜晚,增加霓虹灯效果,赛博朋克风格"
@@ -1475,7 +1602,9 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "id": "qvideo-user123-1766454050923137689",
@@ -1490,7 +1619,9 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           },
           "400": {
             "description": "请求参数错误或原视频未完成",
@@ -1498,11 +1629,15 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "请求有误",
+            "x-apifox-ordering": 1
           },
           "404": {
             "description": "原视频任务不存在",
@@ -1510,14 +1645,21 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "未找到",
+            "x-apifox-ordering": 2
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/sora-2-pro",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178019-run"
       }
     },
     "/queue/fal-ai/vidu/q1/text-to-video": {
@@ -1584,7 +1726,18 @@
                   "prompt",
                   "aspect_ratio",
                   "bgm"
-                ]
+                ],
+                "x-apifox-orders": [
+                  "prompt",
+                  "style",
+                  "seed",
+                  "duration",
+                  "resolution",
+                  "aspect_ratio",
+                  "movement_amplitude",
+                  "bgm"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "example": "{\n        \"prompt\": \"一只可爱的橘猫在阳光下追逐蝴蝶，慢镜头，电影质感，温暖的光线\",\n        \"seed\": 1,\n        \"duration\": 5,\n        \"resolution\": \"1080p\",\n        \"movement_amplitude\": \"auto\",\n}"
             }
@@ -1626,7 +1779,15 @@
                     "response_url",
                     "status_url",
                     "cancel_url"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "IN_QUEUE",
@@ -1637,10 +1798,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/viduq1",
+        "x-apifox-status": "developing",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178032-run"
       }
     },
     "/queue/fal-ai/vidu/q1/reference-to-video": {
@@ -1699,7 +1865,13 @@
                         "id",
                         "images",
                         "voice_id"
-                      ]
+                      ],
+                      "x-apifox-orders": [
+                        "id",
+                        "images",
+                        "voice_id"
+                      ],
+                      "x-apifox-ignore-properties": []
                     },
                     "description": "图片主体信息支持1-7个主体，主体图片共1 ～ 7张"
                   },
@@ -1740,7 +1912,19 @@
                   "movement_amplitude",
                   "aspect_ratio",
                   "bgm"
-                ]
+                ],
+                "x-apifox-orders": [
+                  "prompt",
+                  "subjects",
+                  "seed",
+                  "audio",
+                  "duration",
+                  "resolution",
+                  "movement_amplitude",
+                  "aspect_ratio",
+                  "bgm"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "example": {
                 "prompt": "The @devil is looking at the @apple on the @beach and walking around @beach.",
@@ -1811,7 +1995,15 @@
                     "response_url",
                     "status_url",
                     "cancel_url"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "IN_QUEUE",
@@ -1822,10 +2014,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/viduq1",
+        "x-apifox-status": "developing",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178034-run"
       }
     },
     "/queue/fal-ai/vidu/requests/{request_id}/status": {
@@ -1879,7 +2076,11 @@
                       },
                       "required": [
                         "inference_time"
-                      ]
+                      ],
+                      "x-apifox-orders": [
+                        "inference_time"
+                      ],
+                      "x-apifox-ignore-properties": []
                     },
                     "result": {
                       "type": "object",
@@ -1897,12 +2098,21 @@
                           "required": [
                             "url",
                             "content_type"
-                          ]
+                          ],
+                          "x-apifox-orders": [
+                            "url",
+                            "content_type"
+                          ],
+                          "x-apifox-ignore-properties": []
                         }
                       },
                       "required": [
                         "video"
-                      ]
+                      ],
+                      "x-apifox-orders": [
+                        "video"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
                   },
                   "required": [
@@ -1913,7 +2123,17 @@
                     "cancel_url",
                     "metrics",
                     "result"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url",
+                    "metrics",
+                    "result"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "COMPLETED",
@@ -1933,7 +2153,9 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           },
           "202": {
             "description": "",
@@ -1972,7 +2194,17 @@
                     "cancel_url",
                     "queue_position",
                     "logs"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url",
+                    "queue_position",
+                    "logs"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "IN_PROGRESS",
@@ -1985,10 +2217,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "已接受",
+            "x-apifox-ordering": 1
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/viduq2-turbo",
+        "x-apifox-status": "developing",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178048-run"
       }
     },
     "/queue/fal-ai/vidu/requests/{request_id}": {
@@ -2031,12 +2268,21 @@
                       "required": [
                         "url",
                         "content_type"
-                      ]
+                      ],
+                      "x-apifox-orders": [
+                        "url",
+                        "content_type"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
                   },
                   "required": [
                     "video"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "video"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "video": {
@@ -2046,10 +2292,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/viduq2-turbo",
+        "x-apifox-status": "developing",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178049-run"
       }
     },
     "/queue/fal-ai/vidu/q2/text-to-video": {
@@ -2116,7 +2367,18 @@
                   "prompt",
                   "aspect_ratio",
                   "bgm"
-                ]
+                ],
+                "x-apifox-orders": [
+                  "prompt",
+                  "style",
+                  "seed",
+                  "duration",
+                  "resolution",
+                  "aspect_ratio",
+                  "movement_amplitude",
+                  "bgm"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "example": "{\n        \"prompt\": \"一只可爱的橘猫在阳光下追逐蝴蝶，慢镜头，电影质感，温暖的光线\",\n        \"seed\": 1,\n        \"duration\": 5,\n        \"resolution\": \"1080p\",\n        \"movement_amplitude\": \"auto\",\n}"
             }
@@ -2158,7 +2420,15 @@
                     "response_url",
                     "status_url",
                     "cancel_url"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "IN_QUEUE",
@@ -2169,10 +2439,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/viduq2",
+        "x-apifox-status": "developing",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178037-run"
       }
     },
     "/queue/fal-ai/vidu/q2/reference-to-video": {
@@ -2231,7 +2506,13 @@
                         "id",
                         "images",
                         "voice_id"
-                      ]
+                      ],
+                      "x-apifox-orders": [
+                        "id",
+                        "images",
+                        "voice_id"
+                      ],
+                      "x-apifox-ignore-properties": []
                     },
                     "description": "图片主体信息支持1-7个主体，主体图片共1 ～ 7张"
                   },
@@ -2272,7 +2553,19 @@
                   "movement_amplitude",
                   "aspect_ratio",
                   "bgm"
-                ]
+                ],
+                "x-apifox-orders": [
+                  "prompt",
+                  "subjects",
+                  "seed",
+                  "audio",
+                  "duration",
+                  "resolution",
+                  "movement_amplitude",
+                  "aspect_ratio",
+                  "bgm"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "example": {
                 "prompt": "The @devil is looking at the @apple on the @beach and walking around @beach.",
@@ -2343,7 +2636,15 @@
                     "response_url",
                     "status_url",
                     "cancel_url"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "IN_QUEUE",
@@ -2354,10 +2655,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/viduq2",
+        "x-apifox-status": "developing",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178039-run"
       }
     },
     "/queue/fal-ai/vidu/q2/image-to-video/pro": {
@@ -2426,7 +2732,19 @@
                 },
                 "required": [
                   "image_url"
-                ]
+                ],
+                "x-apifox-orders": [
+                  "prompt",
+                  "image_url",
+                  "audio",
+                  "voice_id",
+                  "is_rec",
+                  "seed",
+                  "duration",
+                  "resolution",
+                  "movement_amplitude"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "example": {
                 "prompt": "A woman walking through a vibrant city street at night, neon lights reflecting off wet pavement.",
@@ -2476,7 +2794,15 @@
                     "response_url",
                     "status_url",
                     "cancel_url"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "IN_QUEUE",
@@ -2487,10 +2813,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/viduq2-pro",
+        "x-apifox-status": "developing",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178042-run"
       }
     },
     "/queue/fal-ai/vidu/q2/start-end-to-video/pro": {
@@ -2556,7 +2887,18 @@
                 "required": [
                   "start_image_url",
                   "end_image_url"
-                ]
+                ],
+                "x-apifox-orders": [
+                  "prompt",
+                  "start_image_url",
+                  "end_image_url",
+                  "is_rec",
+                  "seed",
+                  "duration",
+                  "resolution",
+                  "movement_amplitude"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "example": {
                 "prompt": "Dragon lands on a rock",
@@ -2607,7 +2949,15 @@
                     "response_url",
                     "status_url",
                     "cancel_url"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "IN_QUEUE",
@@ -2618,10 +2968,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/viduq2-pro",
+        "x-apifox-status": "developing",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178043-run"
       }
     },
     "/queue/fal-ai/vidu/q2/image-to-video/turbo": {
@@ -2693,7 +3048,19 @@
                   "audio",
                   "voice_id",
                   "is_rec"
-                ]
+                ],
+                "x-apifox-orders": [
+                  "prompt",
+                  "image_url",
+                  "audio",
+                  "voice_id",
+                  "is_rec",
+                  "seed",
+                  "duration",
+                  "resolution",
+                  "movement_amplitude"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "example": {
                 "prompt": "A woman walking through a vibrant city street at night, neon lights reflecting off wet pavement.",
@@ -2743,7 +3110,15 @@
                     "response_url",
                     "status_url",
                     "cancel_url"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "IN_QUEUE",
@@ -2754,10 +3129,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/viduq2-turbo",
+        "x-apifox-status": "developing",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178046-run"
       }
     },
     "/queue/fal-ai/vidu/q2/start-end-to-video/turbo": {
@@ -2823,7 +3203,18 @@
                 "required": [
                   "start_image_url",
                   "end_image_url"
-                ]
+                ],
+                "x-apifox-orders": [
+                  "prompt",
+                  "start_image_url",
+                  "end_image_url",
+                  "is_rec",
+                  "seed",
+                  "duration",
+                  "resolution",
+                  "movement_amplitude"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "example": {
                 "prompt": "Dragon lands on a rock",
@@ -2874,7 +3265,15 @@
                     "response_url",
                     "status_url",
                     "cancel_url"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "IN_QUEUE",
@@ -2885,10 +3284,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/viduq2-turbo",
+        "x-apifox-status": "developing",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178047-run"
       }
     },
     "/v1/videos/generations": {
@@ -2990,7 +3394,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 0
           },
           "400": {
             "description": "请求参数错误",
@@ -3048,7 +3453,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 1
           },
           "401": {
             "description": "认证失败",
@@ -3065,7 +3471,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 2
           },
           "403": {
             "description": "API Key 额度不足",
@@ -3082,7 +3489,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 3
           },
           "500": {
             "description": "服务器内部错误",
@@ -3099,10 +3507,14 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 4
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/Veo",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178050-run"
       }
     },
     "/v1/videos/generations/{id}": {
@@ -3187,7 +3599,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 0
           },
           "401": {
             "description": "认证失败",
@@ -3204,7 +3617,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 1
           },
           "500": {
             "description": "服务器内部错误",
@@ -3235,10 +3649,14 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 2
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/Veo",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178051-run"
       }
     },
     "/queue/fal-ai/veo3.1/fast/image-to-video": {
@@ -3271,10 +3689,14 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/veo-3.1-fast-generate-001",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178052-run"
       }
     },
     "/queue/fal-ai/veo3.1/fast/image-to-video/requests/{request_id}/status": {
@@ -3318,10 +3740,14 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/veo-3.1-fast-generate-001",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178053-run"
       }
     },
     "/fal-ai/veo3.1/fast/image-to-video/requests/{request_id}": {
@@ -3355,10 +3781,14 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "视频/veo-3.1-fast-generate-001",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178054-run"
       }
     },
     "/v1/images/generations": {
@@ -3544,7 +3974,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 0
           },
           "400": {
             "description": "错误响应",
@@ -3569,13 +4000,24 @@
                           "type": "string",
                           "description": "错误代码"
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "message",
+                        "type",
+                        "code"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "error"
+                  ],
+                  "x-apifox-ignore-properties": []
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 1
           },
           "401": {
             "description": "错误响应",
@@ -3600,13 +4042,24 @@
                           "type": "string",
                           "description": "错误代码"
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "message",
+                        "type",
+                        "code"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "error"
+                  ],
+                  "x-apifox-ignore-properties": []
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 2
           },
           "500": {
             "description": "错误响应",
@@ -3631,16 +4084,30 @@
                           "type": "string",
                           "description": "错误代码"
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "message",
+                        "type",
+                        "code"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "error"
+                  ],
+                  "x-apifox-ignore-properties": []
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 3
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "图像生成/gemini-3.1-flash-image-preview",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178074-run"
       }
     },
     "/v1/images/tasks/{task_id}": {
@@ -3710,7 +4177,9 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           },
           "401": {
             "description": "认证失败",
@@ -3721,7 +4190,9 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "未认证",
+            "x-apifox-ordering": 1
           },
           "404": {
             "description": "任务不存在",
@@ -3732,10 +4203,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "未找到",
+            "x-apifox-ordering": 2
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "图像生成/kling-v2-1",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178066-run"
       }
     },
     "/v1/images/edits": {
@@ -3830,7 +4306,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 0
           },
           "400": {
             "description": "错误响应",
@@ -3855,9 +4332,19 @@
                           "type": "string",
                           "description": "错误代码"
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "message",
+                        "type",
+                        "code"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "error"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "examples": {
                   "2": {
@@ -3893,7 +4380,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 1
           },
           "401": {
             "description": "错误响应",
@@ -3918,9 +4406,19 @@
                           "type": "string",
                           "description": "错误代码"
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "message",
+                        "type",
+                        "code"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "error"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "examples": {
                   "5": {
@@ -3956,7 +4454,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 2
           },
           "500": {
             "description": "错误响应",
@@ -3981,9 +4480,19 @@
                           "type": "string",
                           "description": "错误代码"
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "message",
+                        "type",
+                        "code"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "error"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "examples": {
                   "8": {
@@ -4019,10 +4528,14 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 3
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "图像生成/gemini-3.1-flash-image-preview",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178075-run"
       }
     },
     "/queue/fal-ai/kling-image/o1": {
@@ -4041,6 +4554,19 @@
             "application/json": {
               "schema": {
                 "type": "object",
+                "x-apifox-refs": {
+                  "01KGEWR74HSCCK6CHKVY8C8B5X": {
+                    "$ref": "#/components/schemas/CreateOmniImageRequest",
+                    "x-apifox-overrides": {
+                      "sync_mode": null,
+                      "output_format": null,
+                      "elements": null
+                    }
+                  }
+                },
+                "x-apifox-orders": [
+                  "01KGEWR74HSCCK6CHKVY8C8B5X"
+                ],
                 "properties": {
                   "prompt": {
                     "type": "string",
@@ -4090,6 +4616,13 @@
                 },
                 "required": [
                   "prompt"
+                ],
+                "x-apifox-ignore-properties": [
+                  "prompt",
+                  "image_urls",
+                  "resolution",
+                  "num_images",
+                  "aspect_ratio"
                 ]
               },
               "examples": {
@@ -4149,7 +4682,15 @@
                     "response_url",
                     "status_url",
                     "cancel_url"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "IN_QUEUE",
@@ -4160,10 +4701,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "图像生成/kling-image-o1",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178076-run"
       }
     },
     "/queue/fal-ai/kling-image/requests/{task_id}/status": {
@@ -4220,7 +4766,11 @@
                       },
                       "required": [
                         "inference_time"
-                      ]
+                      ],
+                      "x-apifox-orders": [
+                        "inference_time"
+                      ],
+                      "x-apifox-ignore-properties": []
                     },
                     "result": {
                       "type": "object",
@@ -4240,13 +4790,22 @@
                             "required": [
                               "url",
                               "content_type"
-                            ]
+                            ],
+                            "x-apifox-orders": [
+                              "url",
+                              "content_type"
+                            ],
+                            "x-apifox-ignore-properties": []
                           }
                         }
                       },
                       "required": [
                         "images"
-                      ]
+                      ],
+                      "x-apifox-orders": [
+                        "images"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
                   },
                   "required": [
@@ -4257,7 +4816,17 @@
                     "cancel_url",
                     "metrics",
                     "result"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url",
+                    "metrics",
+                    "result"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "examples": {
                   "1": {
@@ -4298,7 +4867,9 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           },
           "202": {
             "description": "",
@@ -4337,7 +4908,17 @@
                     "cancel_url",
                     "queue_position",
                     "logs"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url",
+                    "queue_position",
+                    "logs"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "IN_QUEUE",
@@ -4350,7 +4931,9 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "已接受",
+            "x-apifox-ordering": 2
           },
           "400": {
             "description": "",
@@ -4372,12 +4955,21 @@
                       "required": [
                         "type",
                         "message"
-                      ]
+                      ],
+                      "x-apifox-orders": [
+                        "type",
+                        "message"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
                   },
                   "required": [
                     "detail"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "detail"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "detail": {
@@ -4387,10 +4979,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "请求有误",
+            "x-apifox-ordering": 1
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "图像生成/kling-image-o1",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178077-run"
       }
     },
     "/queue/fal-ai/kling-image/requests/{task_id}": {
@@ -4438,13 +5035,22 @@
                         "required": [
                           "url",
                           "content_type"
-                        ]
+                        ],
+                        "x-apifox-orders": [
+                          "url",
+                          "content_type"
+                        ],
+                        "x-apifox-ignore-properties": []
                       }
                     }
                   },
                   "required": [
                     "images"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "images"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "images": [
@@ -4460,7 +5066,9 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "成功",
+            "x-apifox-ordering": 0
           },
           "400": {
             "description": "",
@@ -4493,7 +5101,11 @@
                       },
                       "required": [
                         "message"
-                      ]
+                      ],
+                      "x-apifox-orders": [
+                        "message"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
                   },
                   "required": [
@@ -4503,7 +5115,16 @@
                     "status_url",
                     "cancel_url",
                     "detail"
-                  ]
+                  ],
+                  "x-apifox-orders": [
+                    "status",
+                    "request_id",
+                    "response_url",
+                    "status_url",
+                    "cancel_url",
+                    "detail"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "example": {
                   "status": "IN_QUEUE",
@@ -4517,10 +5138,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "请求有误",
+            "x-apifox-ordering": 1
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "图像生成/kling-image-o1",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178078-run"
       }
     },
     "/v1/files": {
@@ -4539,6 +5165,17 @@
             "application/json": {
               "schema": {
                 "type": "object",
+                "x-apifox-refs": {
+                  "01KH3S2XHEY7G7FCBB72DFDW7G": {
+                    "$ref": "#/components/schemas/CreateFileRequest",
+                    "x-apifox-overrides": {
+                      "kodo": null
+                    }
+                  }
+                },
+                "x-apifox-orders": [
+                  "01KH3S2XHEY7G7FCBB72DFDW7G"
+                ],
                 "properties": {
                   "model": {
                     "type": "string",
@@ -4568,6 +5205,11 @@
                 },
                 "required": [
                   "model"
+                ],
+                "x-apifox-ignore-properties": [
+                  "model",
+                  "source_url",
+                  "expires_in"
                 ]
               },
               "example": {
@@ -4597,7 +5239,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 0
           },
           "400": {
             "description": "",
@@ -4639,10 +5282,15 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-name": "请求有误",
+            "x-apifox-ordering": 1
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "文件",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178079-run"
       },
       "get": {
         "summary": "列出用户文件",
@@ -4748,10 +5396,14 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 0
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "文件",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178081-run"
       }
     },
     "/v1/files/{file_id}": {
@@ -4832,7 +5484,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 0
           },
           "400": {
             "description": "请求参数错误",
@@ -4843,7 +5496,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 1
           },
           "401": {
             "description": "认证失败",
@@ -4854,7 +5508,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 2
           },
           "404": {
             "description": "文件不存在",
@@ -4865,7 +5520,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 3
           },
           "500": {
             "description": "服务器内部错误",
@@ -4876,10 +5532,14 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 4
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "文件",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178080-run"
       },
       "delete": {
         "summary": "删除文件",
@@ -4918,7 +5578,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 0
           },
           "400": {
             "description": "请求参数错误",
@@ -4929,7 +5590,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 1
           },
           "401": {
             "description": "认证失败",
@@ -4940,7 +5602,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 2
           },
           "404": {
             "description": "文件不存在",
@@ -4951,7 +5614,8 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 3
           },
           "500": {
             "description": "服务器内部错误",
@@ -4962,10 +5626,14 @@
                 }
               }
             },
-            "headers": {}
+            "headers": {},
+            "x-apifox-ordering": 4
           }
         },
-        "security": []
+        "security": [],
+        "x-apifox-folder": "文件",
+        "x-apifox-status": "released",
+        "x-run-in-apifox": "https://app.apifox.com/web/project/7908369/apis/api-425178082-run"
       }
     }
   },
@@ -5080,7 +5748,9 @@
           "tool_choice": {
             "type": "object",
             "properties": {},
-            "description": "工具选择策略，可以是字符串或对象"
+            "x-apifox-orders": [],
+            "description": "工具选择策略，可以是字符串或对象",
+            "x-apifox-ignore-properties": []
           },
           "type": {
             "type": [
@@ -5120,6 +5790,33 @@
               "high",
               "minimal",
               "none"
+            ],
+            "x-apifox-enum": [
+              {
+                "value": "low",
+                "name": "",
+                "description": ""
+              },
+              {
+                "value": "medium",
+                "name": "",
+                "description": ""
+              },
+              {
+                "value": "high",
+                "name": "",
+                "description": ""
+              },
+              {
+                "value": "minimal",
+                "name": "",
+                "description": ""
+              },
+              {
+                "value": "none",
+                "name": "",
+                "description": ""
+              }
             ]
           },
           "modalities": {
@@ -5161,7 +5858,33 @@
               "$ref": "#/components/schemas/SafetySetting"
             }
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "messages",
+          "stream",
+          "max_tokens",
+          "presence_penalty",
+          "frequency_penalty",
+          "repetition_penalty",
+          "temperature",
+          "top_p",
+          "top_k",
+          "tools",
+          "tool_choice",
+          "type",
+          "enable_thinking",
+          "chat_template_kwargs",
+          "thinking",
+          "reasoning",
+          "reasoning_effort",
+          "modalities",
+          "image_config",
+          "response_format",
+          "safety_settings"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ChatCompletionRequestMessage": {
         "type": "object",
@@ -5244,7 +5967,20 @@
               "$ref": "#/components/schemas/ThinkingBlock"
             }
           }
-        }
+        },
+        "x-apifox-orders": [
+          "role",
+          "content",
+          "name",
+          "function_call",
+          "tool_call_id",
+          "tool_calls",
+          "reasoning_content",
+          "images",
+          "thinking_blocks"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "MessageContent": {
         "type": "object",
@@ -5318,7 +6054,22 @@
             "description": "缓存控制",
             "$ref": "#/components/schemas/CacheControl"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "type",
+          "text",
+          "image_url",
+          "video_url",
+          "file",
+          "input_audio",
+          "video",
+          "file_url",
+          "thinking",
+          "signature",
+          "cache_control"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ImageUrl": {
         "type": "object",
@@ -5340,7 +6091,13 @@
               "high"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "url",
+          "detail"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "VideoUrl": {
         "type": "object",
@@ -5350,7 +6107,12 @@
             "type": "string",
             "description": "视频URL地址"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "url"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "File": {
         "type": "object",
@@ -5368,7 +6130,14 @@
             "type": "string",
             "description": "文件格式"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "file_data",
+          "file_id",
+          "format"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "FileUrl": {
         "type": "object",
@@ -5385,7 +6154,13 @@
             ],
             "description": "文件详细级别"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "url",
+          "detail"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "InputAudio": {
         "type": "object",
@@ -5405,7 +6180,13 @@
               "pcm"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "data",
+          "format"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "CacheControl": {
         "type": "object",
@@ -5419,7 +6200,13 @@
             "type": "string",
             "description": "缓存过期时间"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "type",
+          "ttl"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ThinkingBlock": {
         "type": "object",
@@ -5440,7 +6227,14 @@
             ],
             "description": "签名"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "type",
+          "thinking",
+          "signature"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "Image": {
         "type": "object",
@@ -5457,7 +6251,14 @@
             "type": "integer",
             "description": "图片索引"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "type",
+          "image_url",
+          "index"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ImageUrlObject": {
         "type": "object",
@@ -5471,7 +6272,13 @@
             "type": "string",
             "description": "图片校验和"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "url",
+          "checksum"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ToolObject": {
         "type": "object",
@@ -5491,7 +6298,13 @@
           "function": {
             "$ref": "#/components/schemas/ToolFunction"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "type",
+          "function"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ToolFunction": {
         "type": "object",
@@ -5519,7 +6332,15 @@
           "parameters": {
             "$ref": "#/components/schemas/ToolParameters"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "name",
+          "description",
+          "url",
+          "parameters"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ToolParameters": {
         "type": "object",
@@ -5536,17 +6357,23 @@
             "type": "object",
             "description": "参数属性定义",
             "additionalProperties": {
-              "type": "object"
+              "type": "object",
+              "x-apifox-orders": []
             },
-            "properties": {}
+            "x-apifox-orders": [],
+            "properties": {},
+            "x-apifox-ignore-properties": []
           },
           "property": {
             "type": "object",
             "description": "参数属性定义（备用字段）",
             "additionalProperties": {
-              "type": "object"
+              "type": "object",
+              "x-apifox-orders": []
             },
-            "properties": {}
+            "x-apifox-orders": [],
+            "properties": {},
+            "x-apifox-ignore-properties": []
           },
           "required": {
             "type": [
@@ -5558,7 +6385,15 @@
               "type": "string"
             }
           }
-        }
+        },
+        "x-apifox-orders": [
+          "type",
+          "properties",
+          "property",
+          "required"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ToolCall": {
         "type": "object",
@@ -5590,7 +6425,15 @@
           "function": {
             "$ref": "#/components/schemas/ToolCallFunction"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "index",
+          "type",
+          "id",
+          "function"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ToolCallFunction": {
         "type": "object",
@@ -5604,7 +6447,13 @@
             "type": "string",
             "description": "函数参数（JSON字符串）"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "name",
+          "arguments"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "FunctionCall": {
         "type": "object",
@@ -5622,7 +6471,13 @@
             "type": "string",
             "description": "函数参数（JSON字符串）"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "name",
+          "arguments"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ChatTemplateKwargs": {
         "type": "object",
@@ -5640,7 +6495,14 @@
             "type": "integer",
             "description": "思考token预算"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "thinking",
+          "enable_thinking",
+          "thinking_budget"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ThinkType": {
         "type": "object",
@@ -5662,7 +6524,13 @@
             ],
             "description": "思考token预算"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "type",
+          "budget_tokens"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ReasoningType": {
         "type": "object",
@@ -5689,7 +6557,15 @@
             "type": "boolean",
             "description": "是否启用DeepSeek v3.1思考模式"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "effort",
+          "max_tokens",
+          "exclude",
+          "enabled"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "ImageConfig": {
         "type": "object",
@@ -5709,7 +6585,13 @@
               "4K"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "aspect_ratio",
+          "image_size"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "SafetySetting": {
         "type": "object",
@@ -5736,7 +6618,13 @@
               "BLOCK_LOW_AND_ABOVE"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "category",
+          "threshold"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "聊天"
       },
       "KlingV21CreateRequest": {
         "type": "object",
@@ -5801,7 +6689,19 @@
             "default": "std",
             "description": "生成视频的模式。std：标准模式（720P），性价比高；pro：专家模式（1080P），质量更佳"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "prompt",
+          "negative_prompt",
+          "input_reference",
+          "image_tail",
+          "seconds",
+          "size",
+          "mode"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-v2-1"
       },
       "KlingV21CreateResponse": {
         "type": "object",
@@ -5845,7 +6745,20 @@
             "type": "string",
             "description": "请求体中的视频分辨率（宽 x 高）"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "model",
+          "mode",
+          "status",
+          "created_at",
+          "updated_at",
+          "seconds",
+          "size"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-v2-1"
       },
       "KlingV21StatusResponse": {
         "type": "object",
@@ -5926,10 +6839,20 @@
                       "type": "string",
                       "description": "视频时长（秒）"
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "id",
+                    "url",
+                    "duration"
+                  ],
+                  "x-apifox-ignore-properties": []
                 }
               }
-            }
+            },
+            "x-apifox-orders": [
+              "videos"
+            ],
+            "x-apifox-ignore-properties": []
           },
           "error": {
             "type": "object",
@@ -5943,9 +6866,30 @@
                 "type": "string",
                 "description": "错误描述"
               }
-            }
+            },
+            "x-apifox-orders": [
+              "code",
+              "message"
+            ],
+            "x-apifox-ignore-properties": []
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "model",
+          "mode",
+          "status",
+          "created_at",
+          "updated_at",
+          "completed_at",
+          "seconds",
+          "size",
+          "task_result",
+          "error"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-video-o1"
       },
       "KlingV25TurboCreateRequest": {
         "type": "object",
@@ -6009,7 +6953,19 @@
             "default": "std",
             "description": "生成视频的模式。std：标准模式（720P），性价比高；pro：专家模式（1080P），质量更佳"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "prompt",
+          "negative_prompt",
+          "input_reference",
+          "image_tail",
+          "seconds",
+          "size",
+          "mode"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-v2-5-turbo"
       },
       "KlingV25TurboCreateResponse": {
         "type": "object",
@@ -6053,7 +7009,20 @@
             "type": "string",
             "description": "请求体中的视频分辨率（宽 x 高）"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "model",
+          "mode",
+          "status",
+          "created_at",
+          "updated_at",
+          "seconds",
+          "size"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-v2-5-turbo"
       },
       "KlingV25TurboStatusResponse": {
         "type": "object",
@@ -6134,10 +7103,20 @@
                       "type": "string",
                       "description": "视频时长（秒）"
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "id",
+                    "url",
+                    "duration"
+                  ],
+                  "x-apifox-ignore-properties": []
                 }
               }
-            }
+            },
+            "x-apifox-orders": [
+              "videos"
+            ],
+            "x-apifox-ignore-properties": []
           },
           "error": {
             "type": "object",
@@ -6151,9 +7130,30 @@
                 "type": "string",
                 "description": "错误描述"
               }
-            }
+            },
+            "x-apifox-orders": [
+              "code",
+              "message"
+            ],
+            "x-apifox-ignore-properties": []
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "model",
+          "mode",
+          "status",
+          "created_at",
+          "updated_at",
+          "completed_at",
+          "seconds",
+          "size",
+          "task_result",
+          "error"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-video-o1"
       },
       "KlingVideoO1CreateRequest": {
         "type": "object",
@@ -6195,7 +7195,12 @@
                   ],
                   "description": "图片类型：first_frame 为首帧，end_frame 为尾帧。有尾帧图时必须有首帧图"
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "image",
+                "type"
+              ],
+              "x-apifox-ignore-properties": []
             },
             "maxItems": 7
           },
@@ -6228,7 +7233,13 @@
                   ],
                   "description": "是否保留视频原声：yes 保留，no 不保留"
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "video_url",
+                "refer_type",
+                "keep_original_sound"
+              ],
+              "x-apifox-ignore-properties": []
             },
             "maxItems": 1
           },
@@ -6263,7 +7274,18 @@
             "default": "std",
             "description": "生成视频的模式。std：标准模式（720P），性价比高；pro：专家模式（1080P），质量更佳"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "prompt",
+          "image_list",
+          "video_list",
+          "seconds",
+          "size",
+          "mode"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-video-o1"
       },
       "KlingVideoO1CreateResponse": {
         "type": "object",
@@ -6307,7 +7329,20 @@
             "type": "string",
             "description": "请求体中的视频分辨率（宽 x 高）"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "model",
+          "mode",
+          "status",
+          "created_at",
+          "updated_at",
+          "seconds",
+          "size"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频"
       },
       "KlingVideoO1StatusResponse": {
         "type": "object",
@@ -6388,10 +7423,20 @@
                       "type": "string",
                       "description": "视频时长（秒）"
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "id",
+                    "url",
+                    "duration"
+                  ],
+                  "x-apifox-ignore-properties": []
                 }
               }
-            }
+            },
+            "x-apifox-orders": [
+              "videos"
+            ],
+            "x-apifox-ignore-properties": []
           },
           "error": {
             "type": "object",
@@ -6405,9 +7450,30 @@
                 "type": "string",
                 "description": "错误描述"
               }
-            }
+            },
+            "x-apifox-orders": [
+              "code",
+              "message"
+            ],
+            "x-apifox-ignore-properties": []
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "model",
+          "mode",
+          "status",
+          "created_at",
+          "updated_at",
+          "completed_at",
+          "seconds",
+          "size",
+          "task_result",
+          "error"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-video-o1"
       },
       "KlingV3OmniCreateRequest": {
         "type": "object",
@@ -6421,6 +7487,13 @@
             "default": "kling-v3-omni",
             "enum": [
               "kling-v3-omni"
+            ],
+            "x-apifox-enum": [
+              {
+                "value": "kling-v3-omni",
+                "name": "",
+                "description": ""
+              }
             ]
           },
           "multi_shot": {
@@ -6466,7 +7539,13 @@
                   "type": "string",
                   "description": "该分镜的时长（秒）。不大于当前任务的总时长，不小于 1。"
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "index",
+                "prompt",
+                "duration"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "image_list": {
@@ -6491,7 +7570,12 @@
                     "end_frame"
                   ]
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "image",
+                "type"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "video_list": {
@@ -6525,7 +7609,13 @@
                     "no"
                   ]
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "video_url",
+                "refer_type",
+                "keep_original_sound"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "sound": {
@@ -6583,10 +7673,30 @@
                 "type": "boolean",
                 "description": "true 为生成水印，false 为不生成水印。"
               }
-            }
+            },
+            "x-apifox-orders": [
+              "enabled"
+            ],
+            "x-apifox-ignore-properties": []
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "x-apifox-orders": [
+          "model",
+          "multi_shot",
+          "shot_type",
+          "prompt",
+          "multi_prompt",
+          "image_list",
+          "video_list",
+          "sound",
+          "mode",
+          "size",
+          "seconds",
+          "watermark_info"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-v3-omni"
       },
       "KlingV3CreateRequest ": {
         "type": "object",
@@ -6645,7 +7755,13 @@
                   "type": "string",
                   "description": "该分镜的时长（秒）。不大于当前任务的总时长，不小于 1。"
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "index",
+                "prompt",
+                "duration"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "input_reference": {
@@ -6711,7 +7827,11 @@
                 "type": "boolean",
                 "description": "true 为生成水印，false 为不生成水印。"
               }
-            }
+            },
+            "x-apifox-orders": [
+              "enabled"
+            ],
+            "x-apifox-ignore-properties": []
           },
           "negative_prompt": {
             "type": "string",
@@ -6779,9 +7899,23 @@
                     "minimum": -10,
                     "maximum": 10
                   }
-                }
+                },
+                "x-apifox-orders": [
+                  "horizontal",
+                  "vertical",
+                  "pan",
+                  "tilt",
+                  "roll",
+                  "zoom"
+                ],
+                "x-apifox-ignore-properties": []
               }
-            }
+            },
+            "x-apifox-orders": [
+              "type",
+              "config"
+            ],
+            "x-apifox-ignore-properties": []
           },
           "static_mask": {
             "type": "string",
@@ -6818,10 +7952,20 @@
                         "type": "integer",
                         "description": "y 坐标。"
                       }
-                    }
+                    },
+                    "x-apifox-orders": [
+                      "x",
+                      "y"
+                    ],
+                    "x-apifox-ignore-properties": []
                   }
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "mask",
+                "trajectories"
+              ],
+              "x-apifox-ignore-properties": []
             }
           }
         },
@@ -6893,7 +8037,28 @@
             "sound": "off",
             "mode": "pro"
           }
-        ]
+        ],
+        "x-apifox-orders": [
+          "model",
+          "multi_shot",
+          "shot_type",
+          "prompt",
+          "multi_prompt",
+          "input_reference",
+          "image_tail",
+          "sound",
+          "mode",
+          "size",
+          "seconds",
+          "watermark_info",
+          "negative_prompt",
+          "cfg_scale",
+          "camera_control",
+          "static_mask",
+          "dynamic_masks"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-v3"
       },
       "KlingV26CreateRequest": {
         "type": "object",
@@ -7003,7 +8168,12 @@
                     "first_frame"
                   ]
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "image",
+                "type"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "sound": {
@@ -7034,7 +8204,11 @@
                     "1"
                   ]
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "voice_id"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "image_url": {
@@ -7154,9 +8328,23 @@
                       0
                     ]
                   }
-                }
+                },
+                "x-apifox-orders": [
+                  "horizontal",
+                  "vertical",
+                  "pan",
+                  "tilt",
+                  "roll",
+                  "zoom"
+                ],
+                "x-apifox-ignore-properties": []
               }
-            }
+            },
+            "x-apifox-orders": [
+              "type",
+              "config"
+            ],
+            "x-apifox-ignore-properties": []
           },
           "static_mask": {
             "type": "string",
@@ -7205,10 +8393,20 @@
                           219
                         ]
                       }
-                    }
+                    },
+                    "x-apifox-orders": [
+                      "x",
+                      "y"
+                    ],
+                    "x-apifox-ignore-properties": []
                   }
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "mask",
+                "trajectories"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "callback_url": {
@@ -7226,7 +8424,32 @@
               "my-custom-task-123"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "prompt",
+          "mode",
+          "seconds",
+          "size",
+          "negative_prompt",
+          "input_reference",
+          "image_tail",
+          "image_list",
+          "sound",
+          "voice_list",
+          "image_url",
+          "video_url",
+          "character_orientation",
+          "keep_original_sound",
+          "cfg_scale",
+          "camera_control",
+          "static_mask",
+          "dynamic_masks",
+          "callback_url",
+          "external_task_id"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-v2-6"
       },
       "KlingV26CreateResponse": {
         "type": "object",
@@ -7314,7 +8537,20 @@
               "1280x720"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "model",
+          "mode",
+          "status",
+          "created_at",
+          "updated_at",
+          "seconds",
+          "size"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-v2-6"
       },
       "KlingV26VideoStatusResponse": {
         "type": "object",
@@ -7467,10 +8703,20 @@
                         "5.0"
                       ]
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "id",
+                    "url",
+                    "duration"
+                  ],
+                  "x-apifox-ignore-properties": []
                 }
               }
-            }
+            },
+            "x-apifox-orders": [
+              "videos"
+            ],
+            "x-apifox-ignore-properties": []
           },
           "error": {
             "type": "object",
@@ -7490,9 +8736,33 @@
                   "视频生成失败: 内容不符合规范"
                 ]
               }
-            }
+            },
+            "x-apifox-orders": [
+              "code",
+              "message"
+            ],
+            "x-apifox-ignore-properties": []
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "model",
+          "mode",
+          "status",
+          "progress",
+          "created_at",
+          "updated_at",
+          "completed_at",
+          "expires_at",
+          "seconds",
+          "size",
+          "remixed_from_video_id",
+          "task_result",
+          "error"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/kling-v2-6"
       },
       "CreateVideoGenerationRequest": {
         "type": "object",
@@ -7538,7 +8808,15 @@
               "https://your-server.com/api/veo-callback"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "instances",
+          "parameters",
+          "callback_url"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Veo"
       },
       "Instance": {
         "type": "object",
@@ -7579,7 +8857,17 @@
               "high"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "prompt",
+          "image",
+          "lastFrame",
+          "video",
+          "referenceImages",
+          "compressionQuality"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Veo"
       },
       "ImageInput": {
         "type": "object",
@@ -7610,7 +8898,14 @@
         },
         "required": [
           "mimeType"
-        ]
+        ],
+        "x-apifox-orders": [
+          "bytesBase64Encoded",
+          "uri",
+          "mimeType"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Veo"
       },
       "LastFrameInput": {
         "type": "object",
@@ -7641,7 +8936,14 @@
         },
         "required": [
           "mimeType"
-        ]
+        ],
+        "x-apifox-orders": [
+          "bytesBase64Encoded",
+          "uri",
+          "mimeType"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Veo"
       },
       "VideoInput": {
         "type": "object",
@@ -7670,7 +8972,14 @@
         },
         "required": [
           "mimeType"
-        ]
+        ],
+        "x-apifox-orders": [
+          "bytesBase64Encoded",
+          "uri",
+          "mimeType"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Veo"
       },
       "ReferenceImage": {
         "type": "object",
@@ -7690,7 +8999,13 @@
               "asset"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "image",
+          "referenceType"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Veo"
       },
       "Parameters": {
         "type": "object",
@@ -7797,7 +9112,22 @@
               "pad"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "aspectRatio",
+          "durationSeconds",
+          "sampleCount",
+          "seed",
+          "negativePrompt",
+          "personGeneration",
+          "resolution",
+          "generateAudio",
+          "enhancePrompt",
+          "fps",
+          "resizeMode"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Veo"
       },
       "CreateVideoGenerationResponse": {
         "type": "object",
@@ -7813,7 +9143,12 @@
               "chatvideo-1709712000000000000-uid123"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Veo"
       },
       "VideoGenerationJobInfo": {
         "type": "object",
@@ -7884,7 +9219,18 @@
               "2025-03-06T12:05:30Z"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "model",
+          "status",
+          "message",
+          "data",
+          "created_at",
+          "updated_at"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Veo"
       },
       "VideoGenerationData": {
         "type": "object",
@@ -7905,7 +9251,13 @@
               0
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "videos",
+          "raiMediaFilteredCount"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Veo"
       },
       "VideoResult": {
         "type": "object",
@@ -7926,7 +9278,13 @@
               "video/mp4"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "url",
+          "mimeType"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Veo"
       },
       "ErrorResponse": {
         "type": "object",
@@ -7962,9 +9320,19 @@
                   "api_error"
                 ]
               }
-            }
+            },
+            "x-apifox-orders": [
+              "message",
+              "type"
+            ],
+            "x-apifox-ignore-properties": []
           }
-        }
+        },
+        "x-apifox-orders": [
+          "error"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频/Veo"
       },
       "VideoCreateResponse": {
         "type": "object",
@@ -8008,7 +9376,20 @@
             "type": "string",
             "description": "请求体中的视频分辨率（宽 x 高）"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "model",
+          "mode",
+          "status",
+          "created_at",
+          "updated_at",
+          "seconds",
+          "size"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频"
       },
       "Veo31FastImageToVideoInput": {
         "x-fal-order-properties": [
@@ -8130,7 +9511,21 @@
         "required": [
           "prompt",
           "image_url"
-        ]
+        ],
+        "x-apifox-orders": [
+          "prompt",
+          "duration",
+          "auto_fix",
+          "generate_audio",
+          "aspect_ratio",
+          "resolution",
+          "image_url",
+          "safety_tolerance",
+          "seed",
+          "negative_prompt"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频"
       },
       "Veo31FastImageToVideoOutput": {
         "x-fal-order-properties": [
@@ -8151,7 +9546,12 @@
         "title": "Veo31ImageToVideoOutput",
         "required": [
           "video"
-        ]
+        ],
+        "x-apifox-orders": [
+          "video"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频"
       },
       "File1": {
         "x-fal-order-properties": [
@@ -8216,7 +9616,15 @@
         "title": "File",
         "required": [
           "url"
-        ]
+        ],
+        "x-apifox-orders": [
+          "file_size",
+          "file_name",
+          "content_type",
+          "url"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "视频"
       },
       "KlingV1CreateImageRequest": {
         "type": "object",
@@ -8277,7 +9685,17 @@
             "default": "16:9",
             "description": "生成图片的画面纵横比(宽:高)"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "prompt",
+          "image",
+          "n",
+          "negative_prompt",
+          "aspect_ratio"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/kling-v1"
       },
       "KlingV15CreateImageRequest": {
         "type": "object",
@@ -8362,7 +9780,20 @@
             "default": "16:9",
             "description": "生成图片的画面纵横比(宽:高)"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "prompt",
+          "n",
+          "negative_prompt",
+          "image",
+          "image_reference",
+          "image_fidelity",
+          "human_fidelity",
+          "aspect_ratio"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/kling-v1-5"
       },
       "KlingV2CreateImageRequest": {
         "type": "object",
@@ -8423,7 +9854,17 @@
             "default": "16:9",
             "description": "生成图片的画面纵横比(宽:高)"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "prompt",
+          "image",
+          "n",
+          "negative_prompt",
+          "aspect_ratio"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/kling-v2"
       },
       "KlingV2EditImageRequest": {
         "type": "object",
@@ -8479,9 +9920,14 @@
                   ]
                 }
               },
+              "x-apifox-refs": {},
+              "x-apifox-orders": [
+                "subject_image"
+              ],
               "required": [
                 "subject_image"
-              ]
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "scene_image": {
@@ -8515,7 +9961,19 @@
             "default": "16:9",
             "description": "生成图片的画面纵横比(宽:高)"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "image",
+          "prompt",
+          "n",
+          "subject_image_list",
+          "scene_image",
+          "style_image",
+          "aspect_ratio"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/kling-v2"
       },
       "KlingV2NewCreateImageRequest": {
         "type": "object",
@@ -8576,7 +10034,17 @@
             "default": "16:9",
             "description": "生成图片的画面纵横比(宽:高)"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "prompt",
+          "image",
+          "n",
+          "negative_prompt",
+          "aspect_ratio"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/kling-v2-new"
       },
       "KlingV21CreateImageRequest": {
         "type": "object",
@@ -8637,7 +10105,17 @@
             "default": "16:9",
             "description": "生成图片的画面纵横比(宽:高)"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "prompt",
+          "image",
+          "n",
+          "negative_prompt",
+          "aspect_ratio"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/kling-v2-1"
       },
       "KlingV21EditImageRequest": {
         "type": "object",
@@ -8695,7 +10173,11 @@
                     "https://example.com/subject.jpg"
                   ]
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "subject_image"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "scene_image": {
@@ -8729,7 +10211,19 @@
             "default": "16:9",
             "description": "生成图片的画面纵横比(宽:高)"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "image",
+          "prompt",
+          "n",
+          "subject_image_list",
+          "scene_image",
+          "style_image",
+          "aspect_ratio"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/kling-v2-1"
       },
       "Gemini25FlashImageChatCompletionRequest": {
         "type": "object",
@@ -8779,7 +10273,18 @@
             "minimum": 1,
             "description": "Top-K 采样参数，最小值：1"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "messages",
+          "stream",
+          "image_config",
+          "temperature",
+          "top_p",
+          "top_k"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/gemini-2.5-flash-image"
       },
       "Gemini25FlashImageGenerationRequest": {
         "type": "object",
@@ -8821,7 +10326,17 @@
             "minimum": 1,
             "description": "Top-K 采样参数，最小值：1"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "prompt",
+          "image_config",
+          "temperature",
+          "top_p",
+          "top_k"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/gemini-2.5-flash-image"
       },
       "Gemini25FlashImageEditRequest": {
         "type": "object",
@@ -8878,7 +10393,18 @@
             "minimum": 1,
             "description": "Top-K 采样参数，最小值：1"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "image",
+          "prompt",
+          "image_config",
+          "temperature",
+          "top_p",
+          "top_k"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/gemini-2.5-flash-image"
       },
       "Gemini25FlashImageConfig": {
         "type": "object",
@@ -8900,7 +10426,12 @@
             ],
             "description": "图像宽高比"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "aspect_ratio"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/gemini-2.5-flash-image"
       },
       "Gemini30ProImageChatCompletionRequest": {
         "type": "object",
@@ -8950,7 +10481,18 @@
             "minimum": 1,
             "description": "Top-K 采样参数，最小值：1"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "messages",
+          "stream",
+          "image_config",
+          "temperature",
+          "top_p",
+          "top_k"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/gemini-3.0-pro-image-preview"
       },
       "Gemini30ProImageGenerationRequest": {
         "type": "object",
@@ -8992,7 +10534,17 @@
             "minimum": 1,
             "description": "Top-K 采样参数，最小值：1\n\n限制每步采样时考虑的候选项数量"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "prompt",
+          "image_config",
+          "temperature",
+          "top_p",
+          "top_k"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/gemini-3.0-pro-image-preview"
       },
       "Gemini30ProImageEditRequest": {
         "type": "object",
@@ -9049,7 +10601,18 @@
             "minimum": 1,
             "description": "Top-K 采样参数，最小值：1"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "image",
+          "prompt",
+          "image_config",
+          "temperature",
+          "top_p",
+          "top_k"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/gemini-3.0-pro-image-preview"
       },
       "Gemini30ProImageConfig": {
         "type": "object",
@@ -9080,7 +10643,13 @@
             ],
             "description": "图像分辨率，支持 1K、2K、4K"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "aspect_ratio",
+          "image_size"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成/gemini-3.0-pro-image-preview"
       },
       "KlingImageTaskResponse": {
         "type": "object",
@@ -9092,7 +10661,12 @@
             "type": "string",
             "description": "图像生成任务唯一 ID,用于后续查询任务状态"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "task_id"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成"
       },
       "KlingImageTaskStatusResponse": {
         "type": "object",
@@ -9144,14 +10718,29 @@
                   "format": "uri",
                   "description": "访问生成图像文件的可直接访问 URL。注意:生成的图像会在 7 天后过期,请及时转存"
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "index",
+                "url"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "quantity": {
             "type": "integer",
             "description": "此任务中生成的图像数量,同时该数量会用于计量计算"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "task_id",
+          "created",
+          "status",
+          "status_message",
+          "data",
+          "quantity"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成"
       },
       "ChatMessage": {
         "type": "object",
@@ -9197,7 +10786,12 @@
                           "type": "string",
                           "description": "文本内容"
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "type",
+                        "text"
+                      ],
+                      "x-apifox-ignore-properties": []
                     },
                     {
                       "type": "object",
@@ -9222,16 +10816,31 @@
                               "type": "string",
                               "description": "图片 URL 或 Base64 data URI"
                             }
-                          }
+                          },
+                          "x-apifox-orders": [
+                            "url"
+                          ],
+                          "x-apifox-ignore-properties": []
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "type",
+                        "image_url"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
                   ]
                 }
               }
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "role",
+          "content"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "ChatCompletionResponse": {
         "type": "object",
@@ -9305,22 +10914,45 @@
                                 "type": "string",
                                 "description": "Base64 data URI 格式的图像数据"
                               }
-                            }
+                            },
+                            "x-apifox-orders": [
+                              "url"
+                            ],
+                            "x-apifox-ignore-properties": []
                           },
                           "index": {
                             "type": "integer",
                             "description": "图像索引，从 0 开始"
                           }
-                        }
+                        },
+                        "x-apifox-orders": [
+                          "type",
+                          "image_url",
+                          "index"
+                        ],
+                        "x-apifox-ignore-properties": []
                       }
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "role",
+                    "content",
+                    "reasoning_content",
+                    "images"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "finish_reason": {
                   "type": "string",
                   "description": "完成原因，通常为 stop"
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "index",
+                "message",
+                "finish_reason"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "usage": {
@@ -9346,7 +10978,11 @@
                     "type": "integer",
                     "description": "文本 token 数"
                   }
-                }
+                },
+                "x-apifox-orders": [
+                  "text_tokens"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "completion_tokens_details": {
                 "type": "object",
@@ -9359,11 +10995,34 @@
                     "type": "integer",
                     "description": "图像 token 数"
                   }
-                }
+                },
+                "x-apifox-orders": [
+                  "reasoning_tokens",
+                  "image_tokens"
+                ],
+                "x-apifox-ignore-properties": []
               }
-            }
+            },
+            "x-apifox-orders": [
+              "prompt_tokens",
+              "completion_tokens",
+              "total_tokens",
+              "prompt_tokens_details",
+              "completion_tokens_details"
+            ],
+            "x-apifox-ignore-properties": []
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "created",
+          "model",
+          "choices",
+          "usage"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "ImageGenerationResponse": {
         "type": "object",
@@ -9384,7 +11043,11 @@
                   "type": "string",
                   "description": "Base64 编码的图像数据"
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "b64_json"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "output_format": {
@@ -9419,11 +11082,31 @@
                     "type": "integer",
                     "description": "图像 token 数"
                   }
-                }
+                },
+                "x-apifox-orders": [
+                  "text_tokens",
+                  "image_tokens"
+                ],
+                "x-apifox-ignore-properties": []
               }
-            }
+            },
+            "x-apifox-orders": [
+              "total_tokens",
+              "input_tokens",
+              "output_tokens",
+              "input_tokens_details"
+            ],
+            "x-apifox-ignore-properties": []
           }
-        }
+        },
+        "x-apifox-orders": [
+          "created",
+          "data",
+          "output_format",
+          "usage"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "CreateOmniImageRequest": {
         "title": "FalOmniImageRequest",
@@ -9449,7 +11132,9 @@
             "items": {
               "type": "object",
               "description": "FalOmniImageElement 占位定义，具体结构待后续版本补充",
-              "properties": {}
+              "properties": {},
+              "x-apifox-orders": [],
+              "x-apifox-ignore-properties": []
             }
           },
           "resolution": {
@@ -9500,7 +11185,19 @@
         "required": [
           "prompt"
         ],
-        "additionalProperties": false
+        "additionalProperties": false,
+        "x-apifox-orders": [
+          "prompt",
+          "image_urls",
+          "elements",
+          "resolution",
+          "num_images",
+          "aspect_ratio",
+          "output_format",
+          "sync_mode"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成"
       },
       "Gemini31FlashImageChatCompletionRequest": {
         "type": "object",
@@ -9550,7 +11247,18 @@
             "minimum": 1,
             "description": "Top-K 采样参数，最小值：1"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "messages",
+          "stream",
+          "image_config",
+          "temperature",
+          "top_p",
+          "top_k"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成"
       },
       "Gemini31FlashImageGenerationRequest": {
         "type": "object",
@@ -9592,7 +11300,17 @@
             "minimum": 1,
             "description": "Top-K 采样参数，最小值：1\n\n限制每步采样时考虑的候选项数量"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "prompt",
+          "image_config",
+          "temperature",
+          "top_p",
+          "top_k"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成"
       },
       "Gemini31FlashImageEditRequest": {
         "type": "object",
@@ -9649,7 +11367,18 @@
             "minimum": 1,
             "description": "Top-K 采样参数，最小值：1"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "image",
+          "prompt",
+          "image_config",
+          "temperature",
+          "top_p",
+          "top_k"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成"
       },
       "Gemini31FlashImageConfig": {
         "type": "object",
@@ -9683,7 +11412,13 @@
             ],
             "description": "图像分辨率，支持 512、1K、2K、4K"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "aspect_ratio",
+          "image_size"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "图像生成"
       },
       "CreateFileRequest": {
         "type": "object",
@@ -9721,7 +11456,15 @@
               172800
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "model",
+          "source_url",
+          "kodo",
+          "expires_in"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "QueueStatus": {
         "type": "object",
@@ -9754,13 +11497,17 @@
             "type": "object",
             "description": "The logs.",
             "additionalProperties": true,
-            "properties": {}
+            "x-apifox-orders": [],
+            "properties": {},
+            "x-apifox-ignore-properties": []
           },
           "metrics": {
             "type": "object",
             "description": "The metrics.",
             "additionalProperties": true,
-            "properties": {}
+            "x-apifox-orders": [],
+            "properties": {},
+            "x-apifox-ignore-properties": []
           },
           "queue_position": {
             "type": "integer",
@@ -9770,7 +11517,19 @@
         "required": [
           "status",
           "request_id"
-        ]
+        ],
+        "x-apifox-orders": [
+          "status",
+          "request_id",
+          "response_url",
+          "status_url",
+          "cancel_url",
+          "logs",
+          "metrics",
+          "queue_position"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "FileResponse": {
         "type": "object",
@@ -9871,7 +11630,22 @@
             "$ref": "#/components/schemas/FileError",
             "description": "错误信息。仅当 status 为 failed 时有值"
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "status",
+          "model",
+          "created_at",
+          "synced_at",
+          "expires_at",
+          "file_name",
+          "file_size",
+          "content_type",
+          "error"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "FileListResponse": {
         "type": "object",
@@ -9920,7 +11694,16 @@
               "qfile-12345-1705296000-def456"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "object",
+          "data",
+          "has_more",
+          "first_id",
+          "last_id"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "FileDeleteResponse": {
         "type": "object",
@@ -9955,7 +11738,14 @@
               true
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "deleted"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "ChatMessage2": {
         "type": "object",
@@ -10001,7 +11791,12 @@
                           "type": "string",
                           "description": "文本内容"
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "type",
+                        "text"
+                      ],
+                      "x-apifox-ignore-properties": []
                     },
                     {
                       "type": "object",
@@ -10026,16 +11821,31 @@
                               "type": "string",
                               "description": "图片 URL 或 Base64 data URI"
                             }
-                          }
+                          },
+                          "x-apifox-orders": [
+                            "url"
+                          ],
+                          "x-apifox-ignore-properties": []
                         }
-                      }
+                      },
+                      "x-apifox-orders": [
+                        "type",
+                        "image_url"
+                      ],
+                      "x-apifox-ignore-properties": []
                     }
                   ]
                 }
               }
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "role",
+          "content"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "KodoSource": {
         "type": "object",
@@ -10075,7 +11885,14 @@
               "z0"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "bucket",
+          "object_key",
+          "region"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "ChatCompletionResponse3": {
         "type": "object",
@@ -10149,22 +11966,45 @@
                                 "type": "string",
                                 "description": "Base64 data URI 格式的图像数据"
                               }
-                            }
+                            },
+                            "x-apifox-orders": [
+                              "url"
+                            ],
+                            "x-apifox-ignore-properties": []
                           },
                           "index": {
                             "type": "integer",
                             "description": "图像索引，从 0 开始"
                           }
-                        }
+                        },
+                        "x-apifox-orders": [
+                          "type",
+                          "image_url",
+                          "index"
+                        ],
+                        "x-apifox-ignore-properties": []
                       }
                     }
-                  }
+                  },
+                  "x-apifox-orders": [
+                    "role",
+                    "content",
+                    "reasoning_content",
+                    "images"
+                  ],
+                  "x-apifox-ignore-properties": []
                 },
                 "finish_reason": {
                   "type": "string",
                   "description": "完成原因，通常为 stop"
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "index",
+                "message",
+                "finish_reason"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "usage": {
@@ -10190,7 +12030,11 @@
                     "type": "integer",
                     "description": "文本 token 数"
                   }
-                }
+                },
+                "x-apifox-orders": [
+                  "text_tokens"
+                ],
+                "x-apifox-ignore-properties": []
               },
               "completion_tokens_details": {
                 "type": "object",
@@ -10203,11 +12047,34 @@
                     "type": "integer",
                     "description": "图像 token 数"
                   }
-                }
+                },
+                "x-apifox-orders": [
+                  "reasoning_tokens",
+                  "image_tokens"
+                ],
+                "x-apifox-ignore-properties": []
               }
-            }
+            },
+            "x-apifox-orders": [
+              "prompt_tokens",
+              "completion_tokens",
+              "total_tokens",
+              "prompt_tokens_details",
+              "completion_tokens_details"
+            ],
+            "x-apifox-ignore-properties": []
           }
-        }
+        },
+        "x-apifox-orders": [
+          "id",
+          "object",
+          "created",
+          "model",
+          "choices",
+          "usage"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "FileError": {
         "type": "object",
@@ -10245,7 +12112,15 @@
               "source_url"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "type",
+          "param"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "ImageGenerationResponse4": {
         "type": "object",
@@ -10266,7 +12141,11 @@
                   "type": "string",
                   "description": "Base64 编码的图像数据"
                 }
-              }
+              },
+              "x-apifox-orders": [
+                "b64_json"
+              ],
+              "x-apifox-ignore-properties": []
             }
           },
           "output_format": {
@@ -10301,11 +12180,31 @@
                     "type": "integer",
                     "description": "图像 token 数"
                   }
-                }
+                },
+                "x-apifox-orders": [
+                  "text_tokens",
+                  "image_tokens"
+                ],
+                "x-apifox-ignore-properties": []
               }
-            }
+            },
+            "x-apifox-orders": [
+              "total_tokens",
+              "input_tokens",
+              "output_tokens",
+              "input_tokens_details"
+            ],
+            "x-apifox-ignore-properties": []
           }
-        }
+        },
+        "x-apifox-orders": [
+          "created",
+          "data",
+          "output_format",
+          "usage"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       },
       "ErrorResponse5": {
         "type": "object",
@@ -10326,7 +12225,13 @@
               "error message"
             ]
           }
-        }
+        },
+        "x-apifox-orders": [
+          "status",
+          "message"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": ""
       }
     },
     "responses": {},
